@@ -1,0 +1,1829 @@
+//this file is a mess, an editor outside of stingray needs be made for state_machine
+//for now i just use the transitions file to copy-paste ove the "transitions = []"
+bones = "units/bloodletter/dae_bloodletter_body"
+events = {
+	death = {}
+	ragdoll = {}
+	idle = {}
+	dig_ground = {}
+	dig_door = {}
+	stagger_light_bwd = {}
+	stagger_light_fwd = {}
+	stagger_light_right = {}
+	stagger_light_left = {}
+	move_fwd_walk = {}
+	move_fwd = {}
+	stagger_fwd_exp = {}
+	stagger_bwd_exp = {}
+	stagger_right_exp = {}
+	stagger_left_exp = {}
+	stagger_finished = {}
+	test_tack = {}
+}
+layers = [
+    {
+        default_state = "base/idle"
+        states = [
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__cam_hu06f_herald_2handed_walk_1_01",
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_walk_2_01",
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_walk_1_01",
+				]
+				loop_animation = true
+				name = "base/move_fwd_walk"
+				randomization_type = "every_loop"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+					"1.0",
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_run_1_01",
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_run_2_01",
+				]
+				loop_animation = true
+				name = "base/move_fwd"
+				randomization_type = "every_loop"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_knockdown_facedown_getup_01",
+				]
+				loop_animation = false
+				name = "base/stagger_finished"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				exit_event  = "idle"
+				exit_event_blend = 0.2
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_attack_05",
+				]
+				loop_animation = false
+				name = "base/test_tack"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				exit_event  = "idle"
+				exit_event_blend = 0.2
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_knockdown_knocked_flying_landed_front_01",
+				]
+				loop_animation = false
+				name = "base/stagger_fwd_exp"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_knockdown_knocked_flying_landed_back_01",
+				]
+				loop_animation = false
+				name = "base/stagger_bwd_exp"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_knockdown_knocked_flying_landed_left_01",
+				]
+				loop_animation = false
+				name = "base/stagger_left_exp"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_knockdown_knocked_flying_landed_right_01",
+				]
+				loop_animation = false
+				name = "base/stagger_right_exp"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_hit_reaction_right_01",
+				]
+				loop_animation = false
+				name = "base/stagger_light_right"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				exit_event  = "idle"
+				exit_event_blend = 0.2
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_hit_reaction_left_01",
+				]
+				loop_animation = false
+				name = "base/stagger_light_left"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				exit_event  = "idle"
+				exit_event_blend = 0.2
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_hit_reaction_back_01",
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_hit_reaction_back_02",
+				]
+				loop_animation = false
+				name = "base/stagger_light_bwd"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				exit_event  = "idle"
+				exit_event_blend = 0.2
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_hit_reaction_front_01",
+				]
+				loop_animation = false
+				name = "base/stagger_light_fwd"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				exit_event  = "idle"
+				exit_event_blend = 0.2
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_walk_2_01",
+				]
+				loop_animation = true
+				name = "base/dig_ground"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "dig_ground"
+						mode = "direct"
+						on_beat = ""
+						to = "base/dig_ground"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_walk_2_01",
+				]
+				loop_animation = true
+				name = "base/dig_door"
+				randomization_type = "on_entry"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "dig_door"
+						mode = "direct"
+						on_beat = ""
+						to = "base/dig_door"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__cam_hu06f_herald_2handed_stand_idle_05",
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_stand_idle_01",
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_stand_idle_02",
+					"units/bloodletter/anims/dae_bloodletter_body_01FBX__hu06f_herald_2handed_sword_stand_idle_04",
+				]
+				loop_animation = true
+				name = "base/idle"
+				randomization_type = "every_loop_dont_repeat"
+				root_driving = "ignore"
+				speed = "1"
+				state_type = "regular"
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]
+				weights = [
+					"1.0",
+					"1.0",
+					"1.0",
+					"1.0",
+				]
+			}
+			{
+				animations = [
+				]
+				randomization_type = "every_loop"
+				name = "base/death"
+				loop_animation = false
+				//ragdoll = "ragdoll"
+				//state_type = "ragdoll"
+				state_type = "regular"
+				transitions = [
+					{
+						blend_time = 0.2
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+				]
+				weights = [
+				]
+			}			
+        ]
+    }
+]
+
+ragdolls = {
+	ragdoll = {
+		actors = [
+			"be_prop_0",
+			"be_prop_1",
+			"be_prop_2",
+			"be_prop_3",
+			"be_prop_4",
+			"be_prop_5",
+			"root",
+			"spine_0",
+			"spine_1",
+			"spine_2",
+			"clav_left",
+			"upperarm_left",
+			"lowerarm_left",
+			"hand_left",
+			"finger_index_left_0",
+			"finger_index_left_1",
+			"finger_index_left_2",
+			"finger_ring_left_0",
+			"finger_ring_left_1",
+			"finger_ring_left_2",
+			"thumb_left_0",
+			"thumb_left_1",
+			"thumb_left_2",
+			"lowerarm_roll_left_0",
+			"vambrace_left",
+			"upperarm_roll_left_0",
+			"shoulderpad_left_0",
+			"clav_right",
+			"upperarm_right",
+			"lowerarm_right",
+			"hand_right",
+			"finger_index_right_0",
+			"finger_index_right_1",
+			"finger_index_right_2",
+			"finger_ring_right_0",
+			"finger_ring_right_1",
+			"finger_ring_right_2",
+			"thumb_right_0",
+			"thumb_right_1",
+			"thumb_right_2",
+			"lowerarm_roll_right_0",
+			"vambrace_right",
+			"upperarm_roll_right_0",
+			"shoulderpad_right_0",
+			"neck_0",
+			"neck_1",
+			"head_0",
+			"eyebrow_0",
+			"jaw_0",
+			"tongue_0",
+			"tongue_1",
+			"tongue_2",
+			"upperleg_left",
+			"lowerleg_left",
+			"ankle_left",
+			"foot_left",
+			"toe_left_0",
+			"leg_armour_left_0",
+			"upperleg_right",
+			"lowerleg_right",
+			"ankle_right",
+			"foot_right",
+			"toe_right_0",
+			"leg_armour_right_0",
+			"loincloth_front_0",
+			"loincloth_front_1",
+			"loincloth_rear_0",
+			"loincloth_rear_1",
+			"belt_chain_0",
+			"belt_chain_1",
+			"belt_chain_2",
+			"belt_skulls_0",
+			"belt_skulls_1",
+			"belt_skulls_2",
+			"belt_skulls_3",
+		]
+		keyframed = [
+		]
+	}
+}
+variables = {
+	move_speed = 1,
+	stagger_scale = 1
+}

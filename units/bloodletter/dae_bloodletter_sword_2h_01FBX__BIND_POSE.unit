@@ -1,0 +1,56 @@
+// animation_state_machine = "units/bloodletter/dae_bloodletter_body"
+materials = {
+}
+
+data = {
+    mat_slots = {
+        slot1 = "sword",
+    }
+    mat_to_use = "units/weapons/player/wpn_we_dagger_01_t1/wpn_we_dagger_01_t1_runed_01_3p"
+    
+    colors = {
+        slot1 = "textures/bloodletter/dae_bloodletter_sword_2h_01_base_colour"
+    }
+    normals = {
+        slot1 = "textures/bloodletter/dae_bloodletter_sword_2h_01_normal"
+    }
+    MABs = {
+        slot1 = "textures/bloodletter/dae_bloodletter_sword_2h_01_material_map"
+    }
+    emis_colors = {
+		slot1 = "textures/bloodletter/dae_bloodletter_sword_2h_01_mask_color"
+	}
+	emis_details = {
+		slot1 = "textures/bloodletter/dae_bloodletter_sword_2h_01_mask"
+	}
+
+    color_slot = "texture_map_c0ba2942" 
+    norm_slot = "texture_map_59cd86b9"
+    MAB_slot = "texture_map_0205ba86"
+    emis_col_slot = "texture_map_71d74d4d"
+	emis_det_slot = "texture_map_ee282ea2"
+    // breed = "skaven_slave"
+
+    randomize_tints = false
+	scale_max = 1.3
+	scale_min = 0.8
+	tint_variation = 0
+
+    // node_replace = "head_0"
+}
+
+lod = [
+
+]
+
+renderables = {
+        dae_bloodletter_sword_2h_01_lod = {
+            always_keep = false
+            culling = "bounding_volume"
+            generate_uv_unwrap = false
+            occluder = false
+            shadow_caster = true
+            surface_queries = false
+            viewport_visible = true
+        },
+}

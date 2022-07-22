@@ -1,0 +1,9 @@
+bones = "units/nurgling_swarm/dae_nurgling_swarm_01FBX__nurglingswarm01"
+tolerance = {
+	"" = [
+		0.01
+		0.01
+		false
+		false
+	]
+}

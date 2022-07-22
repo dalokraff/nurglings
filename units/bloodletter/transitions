@@ -1,0 +1,107 @@
+transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_bwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_bwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_right"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_light_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_light_left"
+					}
+                    {
+						blend_time = 0.2
+						event = "move_fwd_walk"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd_walk"
+					}
+					{
+						blend_time = 0.2
+						event = "move_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/move_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_fwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_fwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_bwd_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_bwd_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_left_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_left_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_right_exp"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_right_exp"
+					}
+					{
+						blend_time = 0.2
+						event = "stagger_finished"
+						mode = "direct"
+						on_beat = ""
+						to = "base/stagger_finished"
+					}
+					{
+						blend_time = 0.2
+						event = "test_tack"
+						mode = "direct"
+						on_beat = ""
+						to = "base/test_tack"
+					}
+				]

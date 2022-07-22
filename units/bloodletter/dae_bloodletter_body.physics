@@ -1,0 +1,43 @@
+actors = [
+    {
+        enabled = true
+        mass = 0
+        name = "c_head"
+        node = "c_head"
+        shapes = [
+            {
+                material = "flesh"
+                shape = "c_head"
+                template = "enemy_hit_box"
+                type = "sphere"
+            }
+        ]
+        template = "keyframed_no_collision"
+    },
+    {
+        enabled = true
+        mass = 0
+        name = "body"
+        node = "dae_bloodletter_body_01_lod1"
+        shapes = [
+            {
+                material = "flesh"
+                shape = "dae_bloodletter_body_01_lod1"
+                template = "enemy_hit_box"
+                type = "sphere"
+            }
+        ]
+        template = "keyframed_no_collision"
+    },
+]
+
+movers = [
+	{
+		collision_filter = "filter_ai_line_of_sight_check"
+		height = 1
+		name = "mover"
+		radius = 0.69999998807907104
+		slope_limit = 0.66745728254318237
+	}
+]
+

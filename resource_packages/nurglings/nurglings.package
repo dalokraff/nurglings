@@ -1,0 +1,23 @@
+mod = [
+	"nurglings"
+]
+
+package = [
+	"resource_packages/nurglings/nurglings"
+]
+
+lua = [
+	"scripts/mods/nurglings/*"
+]
+
+unit = [
+  "units/*"
+]
+
+material = [
+  "materials/*"
+]  
+
+texture = [
+  "textures/*"
+] 

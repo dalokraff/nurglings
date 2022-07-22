@@ -1,0 +1,262 @@
+bones = "units/nurgling_swarm/dae_nurgling_swarm_01FBX__nurglingswarm01"
+events = {
+	death = {}
+	idle = {}
+	run_fwd = {}
+	turn_90_right = {}
+	turn_90_left = {}
+}
+layers = [
+    {
+        default_state = "base/idle"
+        states = [
+            {
+				animations = [
+					"units/nurgling_swarm/anims/dae_nurgling_swarm_01FBX__ngsw1_nurglingswarm1_stand_idle_04",
+					"units/nurgling_swarm/anims/dae_nurgling_swarm_01FBX__ngsw1_nurglingswarm1_stand_idle_01",
+					"units/nurgling_swarm/anims/dae_nurgling_swarm_01FBX__ngsw1_nurglingswarm01_combat_idle_02",
+				]
+				loop_animation = true
+				name = "base/idle"
+				randomization_type = "every_loop_dont_repeat"
+				root_driving = "delta_position_and_rotation"
+				speed = "1"
+				state_type = "regular"
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.5
+						event = "turn_90_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/turn_90_right"
+					}
+					{
+						blend_time = 0.5
+						event = "turn_90_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/turn_90_left"
+					}
+					{
+						blend_time = 0.5
+						event = "run_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/run_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+				]
+				weights = [
+					"1.0",
+					"1.0",
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/nurgling_swarm/anims/dae_nurgling_swarm_01FBX__ngsw1_nurglingswarm1_turn_right_90_01",
+				]
+				loop_animation = false
+				name = "base/turn_90_right"
+				root_driving = "delta_position_and_rotation"
+				speed = "1"
+				state_type = "regular"
+				exit_event  = "idle"
+				exit_event_blend = 0.2
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.5
+						event = "turn_90_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/turn_90_right"
+					}
+					{
+						blend_time = 0.5
+						event = "turn_90_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/turn_90_left"
+					}
+					{
+						blend_time = 0.5
+						event = "run_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/run_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/nurgling_swarm/anims/dae_nurgling_swarm_01FBX__ngsw1_nurglingswarm1_turn_left_90_01",
+				]
+				loop_animation = false
+				name = "base/turn_90_left"
+				root_driving = "delta_position_and_rotation"
+				speed = "1"
+				state_type = "regular"
+				exit_event  = "idle"
+				exit_event_blend = 0.2
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.5
+						event = "turn_90_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/turn_90_right"
+					}
+					{
+						blend_time = 0.5
+						event = "turn_90_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/turn_90_left"
+					}
+					{
+						blend_time = 0.5
+						event = "run_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/run_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+					"units/nurgling_swarm/anims/dae_nurgling_swarm_01FBX__ngsw1_nurglingswarm1_charge_01",
+				]
+				loop_animation = false
+				name = "base/run_fwd"
+				randomization_type = "every_loop"
+				root_driving = "delta_position_and_rotation"
+				speed = "1"
+				state_type = "regular"
+				exit_event  = "idle"
+				exit_event_blend = 0.2
+				transitions = [
+					{
+						blend_time = 0.5
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.5
+						event = "turn_90_right"
+						mode = "direct"
+						on_beat = ""
+						to = "base/turn_90_right"
+					}
+					{
+						blend_time = 0.5
+						event = "turn_90_left"
+						mode = "direct"
+						on_beat = ""
+						to = "base/turn_90_left"
+					}
+					{
+						blend_time = 0.2
+						event = "run_fwd"
+						mode = "direct"
+						on_beat = ""
+						to = "base/run_fwd"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+				]
+				weights = [
+					"1.0",
+				]
+			}
+			{
+				animations = [
+				]
+				randomization_type = "every_loop"
+				name = "base/death"
+				loop_animation = false
+				//ragdoll = "ragdoll"
+				//state_type = "ragdoll"
+				state_type = "regular"
+				transitions = [
+					{
+						blend_time = 0.2
+						event = "idle"
+						mode = "direct"
+						on_beat = ""
+						to = "base/idle"
+					}
+					{
+						blend_time = 0.2
+						event = "death"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+					{
+						blend_time = 0.2
+						event = "ragdoll"
+						mode = "direct"
+						on_beat = ""
+						to = "base/death"
+					}
+				]
+				weights = [
+				]
+			}			
+        ]
+    }
+]

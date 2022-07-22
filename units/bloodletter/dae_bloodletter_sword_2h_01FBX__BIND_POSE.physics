@@ -1,0 +1,19 @@
+actors = [
+    {
+        enabled = false
+        mass = 0
+        name = "rp_dropped"
+        node = "dae_bloodletter_sword_2h_01_lod"
+        shapes = [
+            {
+                material = "iron"
+                shape = "dae_bloodletter_sword_2h_01_lod"
+                template = "dropped_weapon"
+                type = "convex_computed"
+            }
+        ]
+        template = "dynamic"
+    },
+]
+
+

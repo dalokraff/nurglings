@@ -1,0 +1,9 @@
+bones = "units/bloodletter/dae_bloodletter_body"
+tolerance = {
+	"" = [
+		0.01
+		0.01
+		true
+		true
+	]
+}
